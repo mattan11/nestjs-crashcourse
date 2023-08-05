@@ -1,7 +1,7 @@
-import {Injectable} from "@nestjs/common";
+import { Injectable } from '@nestjs/common';
 import { initTRPC } from '@trpc/server';
 
-@Injectable
+@Injectable()
 export class TrpcService {
     trpc = initTRPC.create();
     procedure = this.trpc.procedure;
