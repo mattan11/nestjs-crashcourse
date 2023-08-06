@@ -1,8 +1,8 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { TrpcRouter } from "@server/trpc/trpc.router";
+import { TrpcRouter } from '@server/trpc/trpc.router';
 
-console.log(process.env.PORT)
+console.log(process.env.PORT);
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
