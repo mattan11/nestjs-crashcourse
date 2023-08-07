@@ -6,6 +6,7 @@ console.log(process.env.PORT);
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.setGlobalPrefix('api');
   app.enableCors();
   const trpc = app.get(TrpcRouter);
   trpc.applyMiddleware(app);
